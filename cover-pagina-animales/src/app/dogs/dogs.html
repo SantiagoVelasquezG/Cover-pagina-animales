@@ -1,20 +1,23 @@
-<h2 class="mb-4">🐶 Perros en adopción</h2>
+<div class="container py-4">
+  <h2 class="page-title mb-4">🐶 Perros en adopción</h2>
 
-<div class="row row-cols-1 row-cols-md-3 g-4">
-  @for (dog of dogs; track dog.id) {
-    <div class="col">
-      <div class="card h-100 shadow-sm">
-        <div class="card-body">
-          <h5 class="card-title">{{ dog.name }}</h5>
-          <p class="card-text text-muted">{{ dog.description }}</p>
-          <span class="badge bg-primary">{{ dog.age }} años</span>
-        </div>
-        <div class="card-footer">
-          <a [routerLink]="['/dogs', dog.id]" class="btn btn-outline-primary w-100">
-            Ver más 🐶
-          </a>
+  <div class="row row-cols-1 row-cols-md-3 g-4">
+    @for (dog of dogs; track dog.id) {
+      <div class="col">
+        <div class="card pet-card h-100">
+          <div class="card-body text-center pt-4">
+            <div class="pet-emoji mb-2">🐶</div>
+            <h5 class="card-title fw-bold">{{ dog.name }}</h5>
+            <p class="card-text text-muted small">{{ dog.description }}</p>
+            <span class="badge rounded-pill bg-primary">{{ dog.age }} años</span>
+          </div>
+          <div class="card-footer bg-transparent border-0 pb-4 text-center">
+            <a [routerLink]="['/dogs', dog.id]" class="btn btn-adoptar px-4">
+              Ver más 🐶
+            </a>
+          </div>
         </div>
       </div>
-    </div>
-  }
+    }
+  </div>
 </div>

@@ -1,0 +1,37 @@
+.page-title {
+  color: #2d2d2d;
+  font-weight: 800;
+}
+
+.pet-card {
+  border: none;
+  border-radius: 20px;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+  transition: transform 0.3s, box-shadow 0.3s;
+  border-top: 4px solid #fda085;
+  overflow: hidden;
+}
+
+.pet-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 15px 35px rgba(0,0,0,0.15);
+}
+
+.pet-emoji {
+  font-size: 3rem;
+  filter: drop-shadow(2px 2px 4px rgba(0,0,0,0.1));
+}
+
+.btn-adoptar {
+  background: linear-gradient(135deg, #f6d365, #fda085);
+  border: none;
+  color: white;
+  font-weight: bold;
+  border-radius: 50px;
+  transition: transform 0.2s;
+}
+
+.btn-adoptar:hover {
+  transform: translateY(-2px);
+  color: white;
+}

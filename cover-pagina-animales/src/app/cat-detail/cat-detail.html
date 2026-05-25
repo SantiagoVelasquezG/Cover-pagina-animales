@@ -1,15 +1,17 @@
 @if (cat) {
-  <div class="row justify-content-center">
-    <div class="col-md-6">
-      <a routerLink="/cats" class="btn btn-outline-secondary mb-4">← Volver a gatos</a>
+  <div class="container py-4">
+    <div class="detail-container">
+      <a routerLink="/cats" class="btn btn-outline-secondary btn-volver mb-4">← Volver a gatos</a>
 
-      <div class="card shadow">
-        <div class="card-body text-center p-5">
-          <div class="display-1 mb-3">🐱</div>
-          <h2 class="card-title">{{ cat.name }}</h2>
-          <span class="badge bg-warning text-dark mb-3">{{ cat.age }} años</span>
+      <div class="card detail-card">
+        <div class="detail-header text-center">
+          <div class="pet-emoji-large">🐱</div>
+          <h2 class="fw-bold mt-2 text-white">{{ cat.name }}</h2>
+          <span class="badge bg-white text-dark rounded-pill px-3 py-2">{{ cat.age }} años</span>
+        </div>
 
-          <table class="table mt-3 text-start">
+        <div class="card-body p-4">
+          <table class="table detail-table">
             <tbody>
               <tr>
                 <th>Raza</th>
@@ -26,7 +28,7 @@
             </tbody>
           </table>
 
-          <button class="btn btn-warning btn-lg w-100 mt-3">
+          <button class="btn btn-adoptar w-100 mt-2">
             ❤️ Quiero adoptar a {{ cat.name }}
           </button>
         </div>
@@ -36,6 +38,6 @@
 } @else {
   <div class="text-center mt-5">
     <h3>🐱 Gato no encontrado</h3>
-    <a routerLink="/cats" class="btn btn-warning mt-3">Volver al listado</a>
+    <a routerLink="/cats" class="btn btn-warning mt-3 rounded-pill">Volver al listado</a>
   </div>
 }

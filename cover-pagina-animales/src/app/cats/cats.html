@@ -1,0 +1,20 @@
+<h2 class="mb-4">🐱 Gatos en adopción</h2>
+
+<div class="row row-cols-1 row-cols-md-3 g-4">
+  @for (cat of cats; track cat.id) {
+    <div class="col">
+      <div class="card h-100 shadow-sm">
+        <div class="card-body">
+          <h5 class="card-title">{{ cat.name }}</h5>
+          <p class="card-text text-muted">{{ cat.description }}</p>
+          <span class="badge bg-warning text-dark">{{ cat.age }} años</span>
+        </div>
+        <div class="card-footer">
+          <a [routerLink]="['/cats', cat.id]" class="btn btn-outline-warning w-100">
+            Ver más 🐱
+          </a>
+        </div>
+      </div>
+    </div>
+  }
+</div>

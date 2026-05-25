@@ -1,0 +1,41 @@
+@if (cat) {
+  <div class="row justify-content-center">
+    <div class="col-md-6">
+      <a routerLink="/cats" class="btn btn-outline-secondary mb-4">← Volver a gatos</a>
+
+      <div class="card shadow">
+        <div class="card-body text-center p-5">
+          <div class="display-1 mb-3">🐱</div>
+          <h2 class="card-title">{{ cat.name }}</h2>
+          <span class="badge bg-warning text-dark mb-3">{{ cat.age }} años</span>
+
+          <table class="table mt-3 text-start">
+            <tbody>
+              <tr>
+                <th>Raza</th>
+                <td>{{ cat.breed }}</td>
+              </tr>
+              <tr>
+                <th>Género</th>
+                <td>{{ cat.gender }}</td>
+              </tr>
+              <tr>
+                <th>Descripción</th>
+                <td>{{ cat.description }}</td>
+              </tr>
+            </tbody>
+          </table>
+
+          <button class="btn btn-warning btn-lg w-100 mt-3">
+            ❤️ Quiero adoptar a {{ cat.name }}
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+} @else {
+  <div class="text-center mt-5">
+    <h3>🐱 Gato no encontrado</h3>
+    <a routerLink="/cats" class="btn btn-warning mt-3">Volver al listado</a>
+  </div>
+}

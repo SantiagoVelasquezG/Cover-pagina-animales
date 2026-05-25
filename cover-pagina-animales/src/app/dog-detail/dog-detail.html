@@ -1,0 +1,41 @@
+@if (dog) {
+  <div class="row justify-content-center">
+    <div class="col-md-6">
+      <a routerLink="/dogs" class="btn btn-outline-secondary mb-4">← Volver a perros</a>
+
+      <div class="card shadow">
+        <div class="card-body text-center p-5">
+          <div class="display-1 mb-3">🐶</div>
+          <h2 class="card-title">{{ dog.name }}</h2>
+          <span class="badge bg-primary mb-3">{{ dog.age }} años</span>
+
+          <table class="table mt-3 text-start">
+            <tbody>
+              <tr>
+                <th>Raza</th>
+                <td>{{ dog.breed }}</td>
+              </tr>
+              <tr>
+                <th>Género</th>
+                <td>{{ dog.gender }}</td>
+              </tr>
+              <tr>
+                <th>Descripción</th>
+                <td>{{ dog.description }}</td>
+              </tr>
+            </tbody>
+          </table>
+
+          <button class="btn btn-primary btn-lg w-100 mt-3">
+            ❤️ Quiero adoptar a {{ dog.name }}
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+} @else {
+  <div class="text-center mt-5">
+    <h3>🐶 Perro no encontrado</h3>
+    <a routerLink="/dogs" class="btn btn-primary mt-3">Volver al listado</a>
+  </div>
+}
